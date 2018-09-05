@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>simple-web-server</module>
+    <module>simple-servlet-server</module>
   </modules>
 
   <name>tiny-tomcat</name>
