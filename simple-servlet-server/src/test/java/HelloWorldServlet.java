@@ -1,6 +1,3 @@
-import com.tinyseries.tinytomcat.Request;
-import com.tinyseries.tinytomcat.Response;
-
 import javax.servlet.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,6 +23,13 @@ public class HelloWorldServlet implements Servlet {
 //        writer.print("<h1>OK</h1>");
 //        print方法并不会自动刷新，不调用flush就不会显示。
 //        writer.flush();
+
+        ClassLoader loader=this.getClass().getClassLoader();
+        while(loader != null) {
+            System.out.println(loader);
+            loader = loader.getParent();	//获得父类加载器的引用
+        }
+        System.out.println(loader);
     }
 
     @Override
